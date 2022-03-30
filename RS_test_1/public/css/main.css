@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+* body {
+  background: #222222;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: #1d1d1d;
+  padding: 1rem;
+  box-shadow: 0 0 20px black;
+}
+.navbar .navbar-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.navbar .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar .nav-link.burger {
+  display: none;
+}
+.navbar .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  color: whitesmoke;
+}
+.navbar .nav-link p {
+  transition: 0.3s ease-in-out;
+}
+.navbar .nav-img {
+  stroke: #ececec;
+  transition: 0.3s ease-in-out;
+}
+.navbar .nav-link:hover .nav-img {
+  stroke: #00ccb1;
+}
+.navbar .nav-link:hover p {
+  color: #00ccb1;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: #1d1d1d;
+    padding: 1rem;
+  }
+  .navbar .navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .navbar .nav-item {
+    display: none;
+  }
+  .navbar .nav-item.burger {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  .navbar .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    color: whitesmoke;
+  }
+  .navbar .nav-link p {
+    transition: 0.3s ease-in-out;
+  }
+  .navbar .nav-img {
+    stroke: #ececec;
+    transition: 0.3s ease-in-out;
+  }
+  .navbar .nav-link:hover .nav-img {
+    stroke: #00ccb1;
+  }
+  .navbar .nav-link:hover p {
+    color: #00ccb1;
+  }
+
+  .navbar:hover {
+    height: 50vh;
+  }
+  .navbar:hover .navbar-nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .navbar:hover .nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  .navbar:hover .nav-item.burger {
+    display: none;
+  }
+}

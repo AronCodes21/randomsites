@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// Variables
+$bg-dark: #1d1d1d;
+$bg-dark2: #222222;
+$bg-light: rgb(236, 236, 236);
+$nav-link-hover: rgb(0, 204, 177);
+$text-dark: #1d1d1d;
+$text-light: whitesmoke;
+
+// Resets
+@mixin resets {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+// Document
+* {
+  @include resets;
+  body {
+    background: $bg-dark2;
+  }
+}
+
+// Navbar
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  background: $bg-dark;
+
+  padding: 1rem;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  .navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link.burger {
+    display: none;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    color: $text-light;
+  }
+  .nav-link p {
+    transition: 0.3s ease-in-out;
+  }
+  .nav-img {
+    stroke: $bg-light;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-link:hover .nav-img {
+    stroke: $nav-link-hover;
+  }
+  .nav-link:hover p {
+    color: $nav-link-hover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    background: $bg-dark;
+
+    padding: 1rem;
+
+    .navbar-nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+
+    .nav-item {
+      display: none;
+    }
+    .nav-item.burger {
+      display: flex;
+      justify-content: flex-start;
+      cursor: pointer;
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      gap: 10px;
+      color: $text-light;
+    }
+    .nav-link p {
+      transition: 0.3s ease-in-out;
+    }
+    .nav-img {
+      stroke: $bg-light;
+      transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover .nav-img {
+      stroke: $nav-link-hover;
+    }
+    .nav-link:hover p {
+      color: $nav-link-hover;
+    }
+  }
+  .navbar:hover {
+    height: 50vh;
+    .navbar-nav {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    .nav-item.burger {
+      display: none;
+    }
+  }
+} ;

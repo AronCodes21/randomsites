@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #1d1d1d;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  align-items: stretch;
+  gap: 1em;
+}
+
+.grid > div {
+  background: #eee;
+  padding: 1em;
+}
+.grid > div:nth-child(odd) {
+  background: #ddd;
+}
+
+.box1 {
+  grid-row: 1/2;
+}
+.box2 {
+  grid-row: 1/3;
+}
+.box3 {
+}
+.box4 {
+  grid-column: 1/4;
+}
